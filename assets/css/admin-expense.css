@@ -1,0 +1,81 @@
+/**
+ * Business Report Admin Styles - EXPENSE MANAGEMENT
+ *
+ * Contains styles specific to the Expense Management page.
+ */
+
+.br-table-top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 1rem;
+}
+
+/* Style for the search box inside the actions flex container */
+.br-expense-actions .search-box {
+    margin: 0;
+}
+.br-expense-actions .search-box input[type="search"] {
+    min-width: 200px;
+}
+/* Reposition search box for expenses */
+.br-expense-actions {
+    justify-content: flex-end;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between search box and buttons */
+}
+.br-expense-actions .search-box {
+    margin-right: auto; /* Pushes buttons to the right if desired, or remove to keep them together */
+    margin-bottom: 0 !important; /* Fix alignment */
+}
+
+/* --- NEW: Button Colors for Expense Tabs --- */
+
+/* Search Button on Expense List */
+.br-expense-actions #search-submit {
+    background-color: #490AA3 !important;
+    border-color: #490AA3 !important;
+    color: #fff !important;
+    transition: background-color 0.2s;
+}
+.br-expense-actions #search-submit:hover {
+    background-color: #3e098a !important;
+    border-color: #3e098a !important;
+}
+
+/* Add Expense Button on Expense List */
+#br-add-expense-btn {
+    background-color: #490AA3 !important;
+    border-color: #490AA3 !important;
+    color: #fff !important;
+}
+#br-add-expense-btn:hover {
+    background-color: #3e098a !important;
+    border-color: #3e098a !important;
+}
+
+/* Add Category Button on Expense Category Tab */
+#br-add-category-btn {
+    background-color: #490AA3 !important; /* Purple */
+    border-color: #490AA3 !important;
+    color: #fff !important;
+}
+#br-add-category-btn:hover {
+    background-color: #3e098a !important;
+    border-color: #3e098a !important;
+}
+
+/* Add Monthly Expense Button */
+#br-add-monthly-expense-btn {
+    background-color: #490AA3 !important;
+    border-color: #490AA3 !important;
+    color: #fff !important;
+}
+#br-add-monthly-expense-btn:hover {
+    background-color: #3e098a !important;
+    border-color: #3e098a !important;
+}

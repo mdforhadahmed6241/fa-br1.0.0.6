@@ -1,0 +1,96 @@
+/**
+ * Business Report Admin Styles - SETTINGS
+ */
+
+.br-settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.settings-section-description {
+    color: #4B5563;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+}
+.br-settings-form th {
+    width: 250px;
+    padding-left: 0;
+    vertical-align: top;
+    padding-top: 15px;
+}
+.br-settings-form td {
+    padding-left: 0;
+    padding-top: 15px;
+}
+.br-settings-form .description {
+    font-size: 12px;
+    color: #4B5563;
+    margin-top: 4px;
+}
+
+/* --- COGS Settings Tab Styles --- */
+#br-dynamic-rules-table { margin-top: 0.5rem; }
+#br-dynamic-rules-table th, #br-dynamic-rules-table td { padding: 10px; }
+#br-dynamic-rules-table input, #br-dynamic-rules-table select { width: 100%; }
+#br-apply-rules-feedback { margin-top: 10px; }
+
+/* --- Telegram Settings Styles --- */
+.br-telegram-metrics-list {
+    border: 1px solid #D1D5DB;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.br-metric-checkbox {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+.br-metric-checkbox input {
+    margin-right: 8px;
+}
+
+/* --- License Settings Styles --- */
+.br-license-box {
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 600px;
+}
+.br-license-box.active-box {
+    border-top: 4px solid #057A55;
+}
+.br-license-box.inactive-box {
+    border-top: 4px solid #E02424;
+}
+.br-license-status-row {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.br-license-badge {
+    margin-left: 10px;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.br-license-badge.active {
+    background-color: #DEF7EC;
+    color: #03543F;
+}
+.br-license-badge.inactive {
+    background-color: #FDE8E8;
+    color: #9B1C1C;
+}
+.br-license-expiry-row {
+    margin-bottom: 15px;
+    color: #4B5563;
+}

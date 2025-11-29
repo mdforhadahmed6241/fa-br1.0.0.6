@@ -1,0 +1,118 @@
+/**
+ * Business Report Admin Styles - META ADS
+ *
+ * Contains styles specific to the Meta Ads Report page (br-meta-ads):
+ * - Sync buttons
+ * - Summary table total row
+ * - Meta Ads Account Cards (Settings Tab)
+ */
+
+.br-sync-actions .dashicons {
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+#br-sync-feedback {
+    font-size: 12px;
+    margin-left: 1rem;
+    display: none;
+    max-width: 300px;
+}
+#br-sync-feedback.success { color: #057A55; }
+#br-sync-feedback.error { color: #E02424; }
+
+.br-data-table-wrapper {
+    margin-top: 1.5rem;
+}
+.br-data-table-wrapper h3 {
+    margin-bottom: 1rem;
+}
+
+/* Total row for Meta Summary table */
+.br-meta-summary-list-table tr.br-total-row th,
+.br-meta-summary-list-table tr.br-total-row td {
+    border-top: 2px solid #D1D5DB;
+    font-weight: 700;
+}
+
+/* --- Meta Ads Account Cards (Settings Tab) --- */
+#br-ad-accounts-list {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+.br-ad-account-card {
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 20px;
+}
+.br-card-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #111827;
+}
+.br-card-actions {
+    display: flex;
+    gap: 10px;
+}
+.br-card-actions a {
+    color: #4B5563;
+    text-decoration: none;
+}
+.br-card-actions a .dashicons-trash {
+    color: #E02424;
+}
+.br-ad-account-card .account-id {
+    font-size: 13px;
+    color: #4B5563;
+    margin: 4px 0 12px;
+}
+.br-card-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.br-card-row span {
+    color: #4B5563;
+}
+.br-card-row strong {
+    color: #111827;
+}
+.br-status-badge.active {
+    background-color: #DEF7EC;
+    color: #03543F;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.br-status-badge.inactive {
+    background-color: #FDE8E8;
+    color: #9B1C1C;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.br-card-footer {
+    border-top: 1px solid #D1D5DB;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom Sync Modal Account Checklist (Used in Meta Ads page modal) */
+.br-account-checklist { margin-top: 1.5rem; }
+.br-account-checklist > label { display: block; margin-bottom: 8px; }
+.br-checklist-actions { text-align: right; margin-bottom: 8px; }
+.br-checklist-actions .button-link { margin-left: 1rem; color: #490AA3; text-decoration: none; }
+.br-checklist { max-height: 200px; overflow-y: auto; border: 1px solid #D1D5DB; padding: 10px; border-radius: 4px; }
+.br-checklist label { display: block; margin-bottom: 8px; font-weight: 400; }
+.br-checklist label input { margin-right: 8px; }
+

@@ -1,0 +1,274 @@
+/**
+ * Business Report Admin Styles - PRODUCT REPORT
+ *
+ * Contains styles specific to the Product Report page:
+ * - COGS List Tab Filters
+ * - Summary Tab Layout
+ * - NEW: Product Performance Tab Styles
+ */
+
+/* --- COGS Product List Page --- */
+.br-table-top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 1rem;
+}
+.br-product-list-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.br-product-list-actions .search-box {
+    margin-right: auto;
+}
+
+/* Styles for Product List Filters */
+.br-filters-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.br-filters-left .search-box {
+    margin: 0;
+}
+.br-filters-left select {
+    min-width: 150px;
+    max-width: 250px;
+}
+.br-filters-left #filter_action {
+    height: 30px;
+    line-height: 28px;
+    padding: 0 12px;
+}
+.br-filters-right {
+    flex-shrink: 0;
+}
+
+
+/* --- Product Report Summary Tab --- */
+.br-product-kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+.br-product-kpi-card {
+    padding: 16px 20px;
+}
+.br-product-kpi-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4B5563;
+}
+.br-product-kpi-card p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+.br-product-kpi-card p .woocommerce-Price-amount {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.2;
+}
+.br-product-kpi-card p .woocommerce-Price-currencySymbol {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.br-inventory-breakdown-wrapper {
+    margin-top: 2rem;
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    /* Removed padding, WP_List_Table handles its own spacing */
+}
+.br-inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 20px 0 20px; /* Padding only at top */
+}
+.br-inventory-header-left h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #111827;
+}
+.br-inventory-header-left p {
+    margin: 0;
+    font-size: 14px;
+    color: #4B5563;
+}
+.br-inventory-header-right {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+.br-inventory-kpi {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 120px;
+}
+.br-inventory-kpi span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4B5563;
+}
+.br-inventory-kpi strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 4px;
+}
+/* Colors for small KPIs */
+.br-inventory-header-right .br-inventory-kpi:nth-child(1) {
+    background-color: #EDE9FE; /* Violet */
+}
+.br-inventory-header-right .br-inventory-kpi:nth-child(2) {
+    background-color: #FCE7F3; /* Pink */
+}
+
+
+/* === Table Customizations (Summary Tab) === */
+#br-product-summary-list-form .wp-list-table {
+    /* Standard table border and radius */
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    box-shadow: none;
+    table-layout: auto;
+    /* Ensure standard WP table styles apply */
+    clear: both;
+    width: 100%;
+}
+#br-product-summary-list-form .wp-list-table thead th,
+#br-product-summary-list-form .wp-list-table tfoot th {
+    background-color: #f6f7f7;
+    font-weight: 600;
+    color: #2c3338;
+}
+#br-product-summary-list-form .wp-list-table th,
+#br-product-summary-list-form .wp-list-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+#br-product-summary-list-form .wp-list-table tbody tr.alternate {
+    background-color: #f6f7f7;
+}
+#br-product-summary-list-form .wp-list-table tbody tr:not(.alternate) {
+    background-color: #fff;
+}
+#br-product-summary-list-form .wp-list-table tbody tr:last-child td {
+     border-bottom: none;
+}
+#br-product-summary-list-form .wp-list-table th.column-category_name,
+#br-product-summary-list-form .wp-list-table td.column-category_name {
+    width: 30%;
+    word-break: normal;
+    font-weight: 500;
+}
+#br-product-summary-list-form .wp-list-table tbody td:not(.column-category_name) {
+    font-weight: normal;
+}
+
+
+/* --- NEW: Product Performance Tab Styles --- */
+
+/* NEW: Style for the combined date filter and search bar row */
+.br-performance-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.br-performance-filters .br-date-filters {
+    flex-shrink: 0;
+}
+.br-performance-filters .search-box {
+    margin: 0; /* Remove default margins */
+}
+.br-performance-filters .search-box input[type="search"] {
+    min-width: 250px;
+}
+/* NEW: Brand color for search button */
+.br-performance-filters #search-submit {
+    background-color: #490AA3;
+    border-color: #490AA3;
+    color: #fff;
+}
+.br-performance-filters #search-submit:hover {
+    background-color: #3e098a;
+    border-color: #3e098a;
+}
+
+
+/* Filters for performance tab */
+#br-product-performance-form .search-box {
+    /* This rule is now overridden by .br-performance-filters .search-box, 
+       but we keep it for potential future use if layout changes */
+    float: right;
+    margin-bottom: 1rem;
+}
+#br-product-performance-form .br-product-filters {
+    float: left;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#br-product-performance-form .br-product-filters select {
+    min-width: 150px;
+}
+
+/* NEW: Brand color for filter button */
+#br-product-performance-form .br-product-filters #post-query-submit {
+    background-color: #490AA3;
+    border-color: #490AA3;
+    color: #fff;
+}
+#br-product-performance-form .br-product-filters #post-query-submit:hover {
+    background-color: #3e098a;
+    border-color: #3e098a;
+}
+
+
+/* Table styles for performance tab */
+#br-product-performance-form .wp-list-table {
+    clear: both; /* Clear floats from search/filters */
+}
+
+/* Style for the two-line performance cells */
+.br-performance-cell {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+}
+.br-performance-cell small {
+    font-size: 12px;
+    color: #4B5563;
+    font-weight: 400;
+}
+
+/* Column alignments for performance table */
+#br-product-performance-form .column-total_sell,
+#br-product-performance-form .column-total_delivered,
+#br-product-performance-form .column-total_returned,
+#br-product-performance-form .column-total_selling_price,
+#br-product-performance-form .column-total_cost_price,
+#br-product-performance-form .column-total_profit {
+    text-align: center; /* Changed from 'right' to 'center' */
+    width: 12%;
+}
+#br-product-performance-form .column-name {
+    width: 28%;
+}
+
+

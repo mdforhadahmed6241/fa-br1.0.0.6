@@ -1,0 +1,201 @@
+/**
+ * Business Report Dashboard Styles
+ */
+
+/* Main Wrapper */
+.br-dashboard-wrap {
+    background-color: #F3F4F6; /* Light gray background */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Header & Filters */
+.br-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.br-dash-title {
+    color: #490AA3; /* Brand Purple */
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+.br-dash-filters {
+    display: flex;
+    gap: 8px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.br-filter-btn {
+    background: transparent;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 6px;
+    color: #6B7280;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+.br-filter-btn:hover {
+    background: #F9FAFB;
+    color: #490AA3;
+}
+.br-filter-btn.active {
+    background: #490AA3;
+    color: #fff;
+}
+.br-custom-date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-left: 1px solid #E5E7EB;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+.br-custom-date-inputs input {
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #374151;
+}
+
+/* Section Titles */
+.br-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+/* KPI Rows */
+.br-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.br-dash-kpi {
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.br-dash-kpi.no-bg {
+    background: #fff; /* Design shows white cards */
+}
+.br-dash-kpi h4 {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #6B7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.br-dash-kpi .br-kpi-val {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+.br-dash-kpi .br-kpi-val .woocommerce-Price-amount {
+    color: #111827;
+}
+
+/* Grid Layouts (Charts & Tables) */
+.br-dashboard-grid-2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.br-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.br-card h4 {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    color: #111827;
+    font-weight: 600;
+}
+.br-chart-wrapper {
+    height: 300px;
+    width: 100%;
+}
+
+/* Tables */
+.br-dash-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.br-dash-table th {
+    text-align: left;
+    font-size: 11px;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F3F4F6;
+}
+.br-dash-table td {
+    padding: 12px 0;
+    font-size: 13px;
+    color: #374151;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: middle;
+}
+.br-dash-table tr:last-child td {
+    border-bottom: none;
+}
+.br-prod-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.br-prod-info img {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.br-no-img {
+    width: 32px;
+    height: 32px;
+    background: #E5E7EB;
+    border-radius: 4px;
+}
+.text-right { text-align: right; }
+.text-red { color: #EF4444; }
+
+/* P&L Table Specifics */
+.br-pnl-table td {
+    padding: 8px 0;
+}
+.br-total-row td {
+    border-top: 2px solid #E5E7EB;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .br-kpi-row { grid-template-columns: repeat(3, 1fr); }
+    .br-dashboard-grid-2-1 { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .br-kpi-row { grid-template-columns: 1fr 1fr; }
+    .br-header-section { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .br-dash-filters { flex-wrap: wrap; }
+}
